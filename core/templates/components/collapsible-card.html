@@ -1,0 +1,25 @@
+{% load component_tags %}
+
+<div class="accordion mb-3" id="{{ rid }}">
+  <div class="accordion-item">
+    <div class="card {{ color }} {{ border_color }}">
+      <div class="accordion-header" id="headingOne">
+
+        <h5 style="cursor: pointer; font-size: 0.81rem; padding: var(--bs-card-cap-padding-y) var(--bs-card-cap-padding-x);" class=" accordion-button card-header {{ header_color }} {{ header_text_color }}"
+            data-bs-toggle="collapse" data-bs-target="#{{ rid }}-1" aria-expanded="true" aria-controls="{{ rid }}"
+        >
+          {{ title }}
+        </h5>
+
+      </div>
+
+      <div id="{{ rid }}-1" class="accordion-collapse collapse {{ show }}" aria-labelledby="headingOne" data-bs-parent="#{{ rid }}">
+
+        <div class="card-body {{ color }} {{ text_color }}">
+          {% slot "body" %}{% endslot %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

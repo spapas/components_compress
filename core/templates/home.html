@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load compress %}
+
+{% block "content" %}
+Home
+{% endblock %}
+
+{% compress js %}
+<script>
+  console.log("HOME")
+</script>
+{% endcompress %}

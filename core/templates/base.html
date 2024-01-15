@@ -1,0 +1,22 @@
+{% load component_tags %}
+{% load compress %}
+
+
+{% component_block "collapsible-card" "DATA" header_color="bg-info" header_text_color="text-white" border_color="border-info" %}
+  {% fill "body" %}
+    <div class='row'>
+
+      CONTENT
+    </div>
+  {% endfill %}
+{% endcomponent_block %}
+
+{% compress js %}
+<script>
+  console.log("BASE")
+</script>
+{% endcompress %}
+
+{% block "content" %}
+
+{% endblock %}
